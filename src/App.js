@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {Header, Titulo,ContenedorBotones, ContenedorHeader} from './elementos/Header'
+import Boton from "./elementos/Boton"
+import { Helmet } from 'react-helmet'
 
-function App() {
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <Helmet>
+      <title>Agregas Gasto</title>
+    </Helmet>
+    <Header>
+      <ContenedorHeader>
+        <Titulo>Agregar gasto</Titulo>
+        <ContenedorBotones>
+          <Boton to="/categorias">Categoria</Boton>
+          <Boton to="/lista">Lista de Gastos</Boton>
+          <Boton>X</Boton>
+        </ContenedorBotones>
+       
+      </ContenedorHeader>
+    </Header>
+    
+    </>
+  )
 }
-
-export default App;
