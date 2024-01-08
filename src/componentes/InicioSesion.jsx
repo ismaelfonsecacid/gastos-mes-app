@@ -38,7 +38,7 @@ export default function RegistroUsuarios() {
        <Input type="email" name="email" placeholder="Correo Electrónico" />
        <Input type="password" name="password" placeholder="Contraseñas" />
        <ContenedorBoton>
-        <Boton as="button" primario type="submit" >Iniciar Sesión</Boton>
+        <Boton as="button" primary type="submit" >Iniciar Sesión</Boton>
        </ContenedorBoton>
       </Formulario>
     </>
