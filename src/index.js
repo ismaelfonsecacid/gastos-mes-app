@@ -12,6 +12,7 @@ import ListaDeGastos from "./componentes/ListaDeGastos";
 import RegistroUsuarios from "./componentes/RegistroUsuarios";
 import favicon from "./imagenes/logo.png";
 import Fondo from './elementos/Fondo'
+import { AuthProvider} from './contextos/AuthContext'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,18 +20,20 @@ root.render(
     <Helmet>
       <link rel="shortcut icon" href={favicon} type="image/x-icon" />
     </Helmet>
-    <BrowserRouter>
-      <Contenedor>
-        <Routes>
-          <Route path={"/editar/:id"} element={<EditarGasto />} />
-          <Route path={"/categorias"} element={<GastosPorCategoria />} />
-          <Route path={"/iniciar-sesion"} element={<InicioSesion />} />
-          <Route path={"/lista"} element={<ListaDeGastos />} />
-          <Route path={"/crear-cuenta"} element={<RegistroUsuarios />} />
-          <Route path={"/"} element={<App />} />
-        </Routes>
-      </Contenedor>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <Contenedor>
+          <Routes>
+            <Route path={"/editar/:id"} element={<EditarGasto />} />
+            <Route path={"/categorias"} element={<GastosPorCategoria />} />
+            <Route path={"/iniciar-sesion"} element={<InicioSesion />} />
+            <Route path={"/lista"} element={<ListaDeGastos />} />
+            <Route path={"/crear-cuenta"} element={<RegistroUsuarios />} />
+            <Route path={"/"} element={<App />} />
+          </Routes>
+        </Contenedor>
+      </BrowserRouter>
+    </AuthProvider>
     <Fondo/>
   </>
 );
