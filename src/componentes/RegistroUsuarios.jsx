@@ -54,7 +54,7 @@ export default function RegistroUsuarios () {
         tipo: 'error',
         mensaje: 'Por favor ingresa un correo electrónico válido.'
       })
-      return;
+      return
     }
     if (correo === '' || password === '' || password2 === '') {
       setEstadoAlerta(true)
@@ -93,6 +93,7 @@ export default function RegistroUsuarios () {
           mensaje = 'Hubo un error al intentar crear la cuenta.'
           break
       }
+      setAlerta({ tipo: 'error', mensaje: mensaje })
     }
   }
   return (

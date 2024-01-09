@@ -2,6 +2,7 @@ import React from 'react'
 import {Header, Titulo,ContenedorBotones, ContenedorHeader} from './elementos/Header'
 import Boton from "./elementos/Boton"
 import { Helmet } from 'react-helmet'
+import BotonCerrarSesion from './componentes/BotonCerrarSesion'
 
 
 export default function App() {
@@ -16,7 +17,7 @@ export default function App() {
         <ContenedorBotones>
           <Boton to="/categorias">Categoria</Boton>
           <Boton to="/lista">Lista de Gastos</Boton>
-          <Boton>X</Boton>
+          <BotonCerrarSesion />
         </ContenedorBotones>
        
       </ContenedorHeader>
