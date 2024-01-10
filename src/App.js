@@ -3,6 +3,7 @@ import {Header, Titulo,ContenedorBotones, ContenedorHeader} from './elementos/He
 import Boton from "./elementos/Boton"
 import { Helmet } from 'react-helmet'
 import BotonCerrarSesion from './componentes/BotonCerrarSesion'
+import FormularioGasto from './componentes/FormularioGasto'
 
 
 export default function App() {
@@ -18,10 +19,11 @@ export default function App() {
           <Boton to="/categorias">Categoria</Boton>
           <Boton to="/lista">Lista de Gastos</Boton>
           <BotonCerrarSesion />
-        </ContenedorBotones>
-       
+        </ContenedorBotones> 
       </ContenedorHeader>
     </Header>
+
+    <FormularioGasto />
     
     </>
   )
