@@ -4,9 +4,9 @@ const theme = {
     colorSecundario: '#000',
     verde: '#43A854',
     rojo: '#E34747',
-    grisClaro: '#E8EFF1',
-    grisClaro2: '#CBDDE2',
-    azulClaro: '#8792F1'
+    grisclaro: '#E8EFF1',
+    grisclaro2: '#CBDDE2',
+    azulclaro: '#8792F1'
 }
 
 export default theme;
