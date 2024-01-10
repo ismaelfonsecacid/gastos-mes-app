@@ -17,6 +17,6 @@ export default function BotonCerrarSesion() {
 
     }
     return (
-        <Boton iconoGrande as="button" onClick={cerrarSesion}><Logout /></Boton>
+        <Boton iconogrande="true" as="button" onClick={cerrarSesion}><Logout /></Boton>
     )
 }

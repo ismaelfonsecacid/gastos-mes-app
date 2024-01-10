@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 const Boton = styled(Link)`
     background: ${(props) => props.primario ? '#5B69E2' : '#000'};
-    width: ${(props) => props.conIcono ? '15.62rem' : 'auto'}; /* 250px */
+    width: ${(props) => props.conicono ? '15.62rem' : 'auto'}; /* 250px */
     margin-left: 1.25rem; /* 20px */
     border: none;
     border-radius: 0.625rem; /* 10px */
@@ -21,7 +21,7 @@ const Boton = styled(Link)`
     outline: none;
  
     svg {
-        height: ${(props) => props.iconoGrande ? '100%' : '0.75rem;'};  /* 12px */
+        height: ${(props) => props.iconogrande ? '100%' : '0.75rem;'};  /* 12px */
         fill: white;
     }
 `;
