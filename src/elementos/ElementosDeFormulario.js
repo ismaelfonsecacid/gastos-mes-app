@@ -7,7 +7,7 @@ const ContenedorFiltros = styled.div`
     margin-bottom: 1.87rem; /* 30px */
  
     @media(max-width: 60rem){ /* 950px */
-        flex-direction: column;
+      
  
         & > * {
             width: 100%;
