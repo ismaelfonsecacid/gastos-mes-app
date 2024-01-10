@@ -93,7 +93,7 @@ const Valor = styled.div`
  
 const Fecha = styled.div`
     border-radius: 0.31rem; /* 5px */
-    background: ${theme.azulClaro};
+    background: ${theme.azulclaro};
     text-align: center;
     color: #fff;
     padding: 0.62rem 3.12rem; /* 10px 50px */
