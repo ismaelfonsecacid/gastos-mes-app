@@ -1,3 +1,76 @@
+
+
+## Descripción del Proyecto
+
+
+
+
+
+
+
+
+## DEPENDENCIES
+1. @testing-library/jest-dom: This library provides a set of Jest matchers specifically for testing React components that interact with the DOM.
+
+2. @testing-library/react: This library provides a set of React-specific testing utilities, such as render, shallow, mount, and act.
+
+3. @testing-library/user-event: This library provides a set of methods for simulating user interactions with a React component, such as clicking buttons and submitting forms.
+
+4. date-fns: This library provides a collection of date and time utilities for JavaScript, including functions for parsing, formatting, manipulating, and validating dates and times.
+
+5. firebase: This is the official JavaScript SDK for Firebase, a platform that provides a variety of backend services for web and mobile applications, including authentication, database, and storage.
+
+6. react: This is the JavaScript library for building interactive user interfaces.
+
+7. react-day-picker: This is a library for selecting dates and times in a user-friendly way.
+
+8. react-dom: This library provides a DOM renderer for React components.
+
+9. react-helmet: This library provides a way to manage the <head> section of your React application.
+
+10. react-router-dom: This library provides routing functionality for React applications.
+
+11. react-scripts: This is a CLI tool for building and deploying React applications.
+
+12. styled-components: This is a library for styling React components. It allows you to create styles inline with your components using JSX.
+
+13. web-vitals: This library provides metrics for measuring the performance of your website.
+
+14. webfontloader: This library is used to load web fonts asynchronously.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
