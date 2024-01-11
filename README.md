@@ -1,73 +1,78 @@
+# Aplicación de Gestión de Gastos Mensuales con React y Firebase
+
+1. [Resumen](#resumen)
+2. [Características Clave](#características-clave)
+3. [Tecnologías Utilizadas](#tecnologías-utilizadas)
+4. [Dependencias del Proyecto](#dependencias-del-proyecto)
+5. [Beneficios](#beneficios)
+6. [Conclusión](#conclusión)
+7. [Getting Started with Create React App](#getting-started-with-create-react-app)
 
 
-## Descripción del Proyecto
+## Resumen
+La aplicación de Gestión de Gastos Mensuales es una solución integral desarrollada con React para la interfaz de usuario y Firebase para la gestión y almacenamiento de datos en la nube. Diseñada para simplificar el seguimiento de los gastos mensuales, la aplicación proporciona una experiencia de usuario intuitiva y segura.
+
+## Características Clave
+
+1. **Interfaz de Usuario Intuitiva:**
+   - Desarrollada con React para una experiencia de usuario fluida.
+
+2. **Registro de Gastos:**
+   - Formulario estructurado para registrar gastos diarios con categorías y etiquetas.
+
+3. **Visualización de Gastos:**
+   - Panel de control con gráficos interactivos y tablas resumen.
+
+4. **Autenticación y Seguridad:**
+   - Firebase garantiza la autenticación segura y el almacenamiento seguro de datos.
+
+5. **Notificaciones Personalizadas:**
+   - Configuración de recordatorios y notificaciones personalizadas.
+
+6. **Sincronización en Tiempo Real:**
+   - Firebase permite la sincronización en tiempo real entre dispositivos.
+
+## Tecnologías Utilizadas
+- React: Desarrollo de la interfaz de usuario.
+- Firebase: Autenticación, almacenamiento de datos y sincronización en tiempo real.
+- HTML y CSS: Diseño y presentación.
+
+# Dependencias del Proyecto
+
+- **@testing-library/jest-dom** (v5.17.0): Librería que provee utilidades para realizar pruebas de integración en React con Jest. Facilita la escritura de aserciones para las pruebas.
+
+- **@testing-library/react** (v13.4.0): Conjunto de herramientas para realizar pruebas unitarias en componentes React. Proporciona funciones para interactuar con los componentes y realizar aserciones.
+
+- **@testing-library/user-event** (v13.5.0): Librería que simula eventos del usuario para ser utilizada en pruebas. Permite simular acciones del usuario, como clics y entradas de teclado.
+
+- **date-fns** (v2.28.0): Librería de manipulación de fechas para JavaScript. Facilita la manipulación y formateo de fechas de manera eficiente y sencilla.
+
+- **firebase** (v10.7.1): Plataforma de desarrollo de aplicaciones web y móviles con funciones backend. En este proyecto, se utiliza para la autenticación de usuarios, almacenamiento de datos y sincronización en tiempo real.
+
+- **react** (v18.2.0): Biblioteca principal de desarrollo de interfaces de usuario en React. Permite la creación de componentes reutilizables y la gestión eficiente del estado de la aplicación.
+
+- **react-day-picker** (v8.0.6): Librería de selección de fechas para React. Facilita la implementación de un calendario interactivo para seleccionar fechas.
+
+- **react-dom** (v18.2.0): Paquete que proporciona el DOM específico para React. Necesario para renderizar componentes React en el navegador.
+
+- **react-helmet** (v6.1.0): Componente React para gestionar elementos del encabezado del documento HTML, como títulos y metadatos.
+
+- **react-router-dom** (v6.21.1): Biblioteca para la navegación declarativa en React. Permite gestionar las rutas de la aplicación de manera eficiente.
+
+- **react-scripts** (v5.0.1): Scripts preconfigurados para proyectos React. Simplifica tareas como la construcción y ejecución de la aplicación.
+
+- **styled-components** (v6.1.6): Librería para escribir estilos en componentes React utilizando tagged templates. Permite crear estilos de manera dinámica y basada en componentes.
+
+- **web-vitals** (v2.1.4): Biblioteca para medir métricas vitales de la web, como el rendimiento y la experiencia del usuario. Ayuda a evaluar el rendimiento de la aplicación.
+
+- **webfontloader** (v1.6.28): Librería para cargar fuentes web de manera asíncrona. Facilita la carga eficiente de fuentes personalizadas en la aplicación.
 
 
+## Beneficios
+La aplicación simplifica el seguimiento de gastos y proporciona herramientas para tomar decisiones financieras informadas. La combinación de React y Firebase garantiza un rendimiento eficiente y una experiencia de usuario óptima.
 
-
-
-
-
-
-## DEPENDENCIES
-1. @testing-library/jest-dom: This library provides a set of Jest matchers specifically for testing React components that interact with the DOM.
-
-2. @testing-library/react: This library provides a set of React-specific testing utilities, such as render, shallow, mount, and act.
-
-3. @testing-library/user-event: This library provides a set of methods for simulating user interactions with a React component, such as clicking buttons and submitting forms.
-
-4. date-fns: This library provides a collection of date and time utilities for JavaScript, including functions for parsing, formatting, manipulating, and validating dates and times.
-
-5. firebase: This is the official JavaScript SDK for Firebase, a platform that provides a variety of backend services for web and mobile applications, including authentication, database, and storage.
-
-6. react: This is the JavaScript library for building interactive user interfaces.
-
-7. react-day-picker: This is a library for selecting dates and times in a user-friendly way.
-
-8. react-dom: This library provides a DOM renderer for React components.
-
-9. react-helmet: This library provides a way to manage the <head> section of your React application.
-
-10. react-router-dom: This library provides routing functionality for React applications.
-
-11. react-scripts: This is a CLI tool for building and deploying React applications.
-
-12. styled-components: This is a library for styling React components. It allows you to create styles inline with your components using JSX.
-
-13. web-vitals: This library provides metrics for measuring the performance of your website.
-
-14. webfontloader: This library is used to load web fonts asynchronously.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Conclusión
+La aplicación desarrollada con React y Firebase ofrece una solución robusta y escalable para el seguimiento de gastos mensuales, brindando a los usuarios un control total sobre sus finanzas de manera accesible y eficiente.
 
 
 
