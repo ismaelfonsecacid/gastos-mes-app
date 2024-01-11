@@ -27,6 +27,10 @@ export default function DPicker({ fecha, setFecha }) {
       justify-content: center;
       outline: none;
       margin-left: 0.5rem;
+
+      @media (max-width: 500px) {
+        font-size: 1.1rem;
+      }
     }
 
     .rdp {
@@ -51,6 +55,7 @@ export default function DPicker({ fecha, setFecha }) {
         width: 100%;
       }
     }
+    
   `
     const formatFecha = (fecha = new Date()) => {
         return format(fecha, `dd 'de' MMMM 'de' yyyy`, { locale: es })

@@ -97,7 +97,7 @@ export default function ListaDeGastos() {
       {gastos.length === 0 && (
         <ContenedorSubtitulo>
           <Subtitulo>No hay mas gastos para mostrar</Subtitulo>
-          <Boton />
+          <Boton as={Link} to={'/'}>Agregar Gasto</Boton>
         </ContenedorSubtitulo>
       )}
       <BarraTotalGastado />

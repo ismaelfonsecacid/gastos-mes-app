@@ -19,6 +19,10 @@ const Boton = styled(Link)`
     justify-content: space-between;
     align-items: center;
     outline: none;
+
+    @media (max-width: 500px) {
+        font-size: 1.1rem;
+      }
  
     svg {
         height: ${(props) => props.iconogrande ? '100%' : '0.75rem;'};  /* 12px */

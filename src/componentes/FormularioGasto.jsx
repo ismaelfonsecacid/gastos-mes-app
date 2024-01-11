@@ -139,7 +139,6 @@ export default function FormularioGasto({ gasto }) {
                 mensaje={alerta.mensaje}
                 estadoAlerta={estadoAlerta}
                 cambiarEstadoAlerta={setestadoAlerta} />
-
         </Formulario>
     )
 }

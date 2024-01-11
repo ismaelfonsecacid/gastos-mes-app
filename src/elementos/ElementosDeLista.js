@@ -113,7 +113,7 @@ const ContenedorBotones = styled.div`
  
 const BotonAccion = styled.button`
     outline: none;
-    background: ${theme.grisClaro};
+    background: ${theme.grisclaro};
     border: none;
     width: 2.5rem; /* 40px */
     display: inline-block;
@@ -130,7 +130,7 @@ const BotonAccion = styled.button`
     opacity: 0;
  
     &:hover {
-        background: ${theme.grisClaro2};
+        background: ${theme.grisclaro2};
     }
  
     svg {
@@ -151,7 +151,7 @@ const ContenedorSubtitulo = styled.div`
 `;
  
 const Subtitulo = styled.h3`
-    color: ${theme.grisClaro2};
+    color: ${theme.grisclaro2};
     font-weight: 400;
     font-size: 40px;
     padding: 2.5rem 0; /* 40px */
@@ -164,7 +164,7 @@ const ContenedorBotonCentral = styled.div`
 `;
  
 const BotonCargarMas = styled.button`
-    background: ${theme.grisClaro};
+    background: ${theme.grisclaro};
     border: none;
     border-radius: 7px;
     color: #000;
@@ -182,7 +182,7 @@ const BotonCargarMas = styled.button`
     transition: .3s ease all;
  
     &:hover {
-        background: ${theme.grisClaro2};
+        background: ${theme.grisclaro2};
     }
 `;
  

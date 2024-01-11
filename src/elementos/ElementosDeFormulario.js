@@ -30,6 +30,9 @@ const Formulario = styled.form`
         &::placeholder {
             color: rgba(0,0,0,.2);
         }
+        
+      }
+       
     }
  
     @media(max-width: 60rem){ /* 950px */
@@ -41,7 +44,7 @@ const Input = styled.input`
     font-size: 2.5rem; /* 40px */
     text-transform: uppercase;
     border: none;
-    border-bottom: 2px solid ${theme.grisClaro};
+    border-bottom: 2px solid ${theme.grisclaro};
     outline: none;
  
     @media(max-width: 60rem){ /* 950px */

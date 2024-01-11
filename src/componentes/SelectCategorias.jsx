@@ -12,7 +12,7 @@ const ContenedorSelect = styled.div`
   height: 5rem; /* 80px */
   width: 40%;
   padding: 0px 1.25rem; /* 20px */
-  font-size: 1.5rem; /* 24px */
+  font-size: 1.2rem; /* 24px */
   text-align: center;
   display: flex;
   align-items: center;
@@ -57,16 +57,19 @@ const Opcion = styled.div`
   &:hover {
     background: ${theme.grisclaro2};
   }
+  @media (max-width: 500px) {
+    padding: 0.5rem;
+  }
 `
 
 const SelectCategorias = ({ categoria, setcategoria }) => {
     const categorias = [
         { id: 'comida', texto: 'Comida' },
-        { id: 'cuentas y pagos', texto: 'Cuentas y pagos' },
+        { id: 'cuentas y pagos', texto: 'Cuentas' },
         { id: 'hogar', texto: 'Hogar' },
-        { id: 'transporte', texto: 'Transporte' },
+        { id: 'transporte', texto: 'Coche' },
         { id: 'ropa', texto: 'Ropa' },
-        { id: 'salud e higiene', texto: 'Salud e Higiene' },
+        { id: 'salud e higiene', texto: 'Salud' },
         { id: 'compras', texto: 'Compras' },
         { id: 'diversion', texto: 'Diversion' }
     ]
@@ -78,7 +81,7 @@ const SelectCategorias = ({ categoria, setcategoria }) => {
 
     return (
         <ContenedorSelect onClick={() => setselect(!select)}>
-            <OpcionSeleccionada grisclaro>
+            <OpcionSeleccionada grisclaro='true'>
                 {categoria}
                 <IconoDown />
             </OpcionSeleccionada>

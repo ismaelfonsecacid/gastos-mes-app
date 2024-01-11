@@ -21,8 +21,8 @@ export default function App() {
         <ContenedorHeader>
           <Titulo>Agregar gasto</Titulo>
           <ContenedorBotones>
-            <Boton to="/categorias">Categoria</Boton>
-            <Boton to="/lista">Lista de Gastos</Boton>
+            <Boton to="/categorias">Categoría</Boton>
+            <Boton to="/lista">Gastos</Boton>
             <BotonCerrarSesion />
           </ContenedorBotones>
         </ContenedorHeader>
