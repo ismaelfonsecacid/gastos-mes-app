@@ -1,15 +1,19 @@
-import React from 'react';
-import {Header, Titulo} from './../elementos/Header';
-import {Helmet} from 'react-helmet';
-import BtnRegresar from './../elementos/BtnRegresar';
-import BarraTotalGastado from './BarraTotalGastado';
-import FormularioGasto from './FormularioGasto';
-import {useParams} from 'react-router-dom';
-import useObtenerGasto from './../hooks/useEditarGasto';
+import React from 'react'
+import { Header, Titulo } from './../elementos/Header'
+import { Helmet } from 'react-helmet'
+import BtnRegresar from './../elementos/BtnRegresar'
+import BarraTotalGastado from './BarraTotalGastado'
+import FormularioGasto from './FormularioGasto'
+import { useParams } from 'react-router-dom'
+import useObtenerGasto from './../hooks/useEditarGasto'
 
+/**
+ * Componente para Editar el Gasto de los campos de la base de datos.
+ * @returns 
+ */
 const EditarGasto = () => {
-	const {id} = useParams();
-	const [gasto] = useObtenerGasto(id);
+	const { id } = useParams()
+	const [gasto] = useObtenerGasto(id)
 
 	return (
 		<>
@@ -18,7 +22,7 @@ const EditarGasto = () => {
 			</Helmet>
 
 			<Header>
-				<BtnRegresar ruta="/lista"/>
+				<BtnRegresar ruta='/lista' />
 				<Titulo>Editar Gasto</Titulo>
 			</Header>
 
@@ -26,7 +30,7 @@ const EditarGasto = () => {
 
 			<BarraTotalGastado />
 		</>
-	);
+	)
 }
- 
-export default EditarGasto;
+
+export default EditarGasto

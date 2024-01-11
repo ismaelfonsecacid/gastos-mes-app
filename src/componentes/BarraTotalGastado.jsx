@@ -1,12 +1,15 @@
 import React from 'react'
-import theme from '../theme'
 import styled from 'styled-components'
+import theme from '../theme'
 import formatearCantidad from '../funciones/convertirAMoneda';
 import { useTotalDelMes } from '../contextos/TotalGastadoEnElMesContext';
 
-
+/**
+ * Componente que carga la barra inferior con el total en euros
+ * @returns <BarraTotal>
+ */
 export default function BarraTotalGastado() {
-  const {total} = useTotalDelMes();
+  const { total } = useTotalDelMes();
   const compartido = 2400;
 
   const BarraTotal = styled.div`

@@ -6,8 +6,12 @@ import 'react-day-picker/dist/style.css'
 import styled from 'styled-components'
 import theme from '../theme'
 
+/**
+ * Componente utilizando la dependencia de DayPicker la cual es un calendario con sus funciones 
+ * @returns 
+ */
 export default function DPicker({ fecha, setFecha }) {
-    const ContenedorInput = styled.div`
+  const ContenedorInput = styled.div`
     position: relative;
 
     input {
@@ -55,41 +59,46 @@ export default function DPicker({ fecha, setFecha }) {
         width: 100%;
       }
     }
-    
   `
-    const formatFecha = (fecha = new Date()) => {
-        return format(fecha, `dd 'de' MMMM 'de' yyyy`, { locale: es })
-    }
 
-    const [visible, setvisible] = useState(false)
-    const handleDateSelect = (selectedDate) => {
-        // Oculta el DayPicker al seleccionar una fecha
-        setvisible(false);
+  /**
+   * 
+   * @param {*} fecha 
+   * @returns Formateo de fecha
+   */
+  const formatFecha = (fecha = new Date()) => {
+    return format(fecha, `dd 'de' MMMM 'de' yyyy`, { locale: es })
+  }
 
-        // Llama a la función setFecha para actualizar la fecha seleccionada
-        setFecha(selectedDate);
-    };
-    return (
-        <ContenedorInput>
-            <>
-                <input
-                    type='text'
-                    readOnly
-                    value={formatFecha(fecha)}
-                    onClick={() => setvisible(!visible)}
-                />
-            </>
+  const [visible, setvisible] = useState(false)
+  const handleDateSelect = selectedDate => {
+    // Oculta el DayPicker al seleccionar una fecha
+    setvisible(false)
 
-            {visible && (
-                <>
-                    <DayPicker
-                        mode='single'
-                        onSelect={handleDateSelect} // Usa la función handleDateSelect
-                        selected={fecha}
-                        locale={es}
-                    />
-                </>
-            )}
-        </ContenedorInput>
-    )
+    // Llama a la función setFecha para actualizar la fecha seleccionada
+    setFecha(selectedDate)
+  }
+  return (
+    <ContenedorInput>
+      <>
+        <input
+          type='text'
+          readOnly
+          value={formatFecha(fecha)}
+          onClick={() => setvisible(!visible)}
+        />
+      </>
+
+      {visible && (
+        <>
+          <DayPicker
+            mode='single'
+            onSelect={handleDateSelect} // Usa la función handleDateSelect
+            selected={fecha}
+            locale={es}
+          />
+        </>
+      )}
+    </ContenedorInput>
+  )
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router'
 import { ContenedorFiltros, Formulario, Input, InputGrande, ContenedorBoton } from '../elementos/ElementosDeFormulario'
 import Boton from '../elementos/Boton'
 import { ReactComponent as IconoPlus } from '../imagenes/plus.svg'
@@ -10,7 +11,6 @@ import { useAuth } from '../contextos/AuthContext'
 import Alerta from '../elementos/Alerta'
 import { useEffect } from 'react'
 import { fromUnixTime } from 'date-fns'
-import { useNavigate } from 'react-router'
 import editarGasto from '../firebase/editarGasto'
 
 
@@ -51,57 +51,57 @@ export default function FormularioGasto({ gasto }) {
         }
     }
 
-   
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		// Transformamos la cantidad en numero y le pasamos 2 decimales.
-		let cantidad = parseFloat(inputCantidad).toFixed(2);
 
-		// Comprobamos que haya una descripcion y valor.
-		if(inputDescripcion !== '' && inputCantidad !== ''){
-			if(cantidad){
-				if(gasto){
-					editarGasto({
-						id: gasto.id,
-						categoria: categoria,
-						descripcion: inputDescripcion,
-						cantidad: inputCantidad,
-						fecha: getUnixTime(fecha)
-					}).then(() => {
-						navigate('/lista');
-					}).catch((error) => {
-						console.log(error);
-					})
-				} else {
-					agregarGasto({
-						categoria: categoria,
-						descripcion: inputDescripcion,
-						cantidad: cantidad,
-						fecha: getUnixTime(fecha),
-						uidUsuario: usuario.uid
-					})
-					.then(() => {
-						setcategoria('hogar');
-						setDescripcion('');
-						setInputCantidad('');
-						setFecha(new Date());
-	
-						setestadoAlerta(true);
-						setalerta({tipo: 'exito', mensaje: 'El gasto fue agregado correctamente.'});
-					})
-					.catch((error) => {
-						setestadoAlerta(true);
-						setalerta({tipo: 'error', mensaje: 'Hubo un problema al intentar agregar tu gasto.'});
-					})
-				}
-			} else {
-				setestadoAlerta(true);
-				setalerta({tipo: 'error', mensaje: 'El valor que ingresaste no es correcto.'});
-			}
-		} else {
-			setestadoAlerta(true);
-			setalerta({tipo: 'error', mensaje: 'Por favor rellena todos los campos.'});
-		}
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Transformamos la cantidad en numero y le pasamos 2 decimales.
+        let cantidad = parseFloat(inputCantidad).toFixed(2);
+
+        // Comprobamos que haya una descripcion y valor.
+        if (inputDescripcion !== '' && inputCantidad !== '') {
+            if (cantidad) {
+                if (gasto) {
+                    editarGasto({
+                        id: gasto.id,
+                        categoria: categoria,
+                        descripcion: inputDescripcion,
+                        cantidad: inputCantidad,
+                        fecha: getUnixTime(fecha)
+                    }).then(() => {
+                        navigate('/lista');
+                    }).catch((error) => {
+                        console.log(error);
+                    })
+                } else {
+                    agregarGasto({
+                        categoria: categoria,
+                        descripcion: inputDescripcion,
+                        cantidad: cantidad,
+                        fecha: getUnixTime(fecha),
+                        uidUsuario: usuario.uid
+                    })
+                        .then(() => {
+                            setcategoria('hogar');
+                            setDescripcion('');
+                            setInputCantidad('');
+                            setFecha(new Date());
+
+                            setestadoAlerta(true);
+                            setalerta({ tipo: 'exito', mensaje: 'El gasto fue agregado correctamente.' });
+                        })
+                        .catch((error) => {
+                            setestadoAlerta(true);
+                            setalerta({ tipo: 'error', mensaje: 'Hubo un problema al intentar agregar tu gasto.' });
+                        })
+                }
+            } else {
+                setestadoAlerta(true);
+                setalerta({ tipo: 'error', mensaje: 'El valor que ingresaste no es correcto.' });
+            }
+        } else {
+            setestadoAlerta(true);
+            setalerta({ tipo: 'error', mensaje: 'Por favor rellena todos los campos.' });
+        }
     }
 
     return (
