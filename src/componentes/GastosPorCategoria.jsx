@@ -1,24 +1,20 @@
-import React from "react";
-import {
-  Header,
-  Titulo,
-} from "../elementos/Header";
+import React from 'react';
+import { Header, Titulo } from '../elementos/Header';
 
-import { Helmet } from "react-helmet";
-import BtnRegresar from "../elementos/BtnRegresar";
-import BarraTotalGastado from "./BarraTotalGastado";
+import { Helmet } from 'react-helmet';
+import BtnRegresar from '../elementos/BtnRegresar';
+import BarraTotalGastado from './BarraTotalGastado';
 import IconoCategoria from '../elementos/IconoCategoria';
-import useObtenerGastosDelMesPorCategoria from "../hooks/useObtenerGastosDelMesPorCategoria";
+import useObtenerGastosDelMesPorCategoria from '../hooks/useObtenerGastosDelMesPorCategoria';
 import {
   ListaDeCategorias,
   ElementoListaCategorias,
   Categoria,
   Valor,
-} from '../elementos/ElementosDeLista'
-import convertirAMoneda from '../funciones/convertirAMoneda'
+} from '../elementos/ElementosDeLista';
+import convertirAMoneda from '../funciones/convertirAMoneda';
 const GastosPorCategoria = () => {
   const gastosPorCategoria = useObtenerGastosDelMesPorCategoria();
- 
 
   return (
     <>
@@ -48,6 +44,6 @@ const GastosPorCategoria = () => {
       <BarraTotalGastado />
     </>
   );
-}
+};
 
 export default GastosPorCategoria;

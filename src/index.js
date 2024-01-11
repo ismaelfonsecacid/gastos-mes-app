@@ -1,48 +1,46 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
-import Contenedor from "./elementos/Contenedor";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Helmet } from "react-helmet";
-import EditarGasto from "./componentes/EditarGasto";
-import GastosPorCategoria from "./componentes/GastosPorCategoria";
-import InicioSesion from "./componentes/InicioSesion";
-import ListaDeGastos from "./componentes/ListaDeGastos";
-import RegistroUsuarios from "./componentes/RegistroUsuarios";
-import Fondo from "./elementos/Fondo";
-import { AuthProvider } from "./contextos/AuthContext";
-import RutaPrivada from "./componentes/RutaPrivada";
-import { TotalGastadoProvider } from "./contextos/TotalGastadoEnElMesContext";
-import WebFont from 'webfontloader'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import Contenedor from './elementos/Contenedor';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+import EditarGasto from './componentes/EditarGasto';
+import GastosPorCategoria from './componentes/GastosPorCategoria';
+import InicioSesion from './componentes/InicioSesion';
+import ListaDeGastos from './componentes/ListaDeGastos';
+import RegistroUsuarios from './componentes/RegistroUsuarios';
+import Fondo from './elementos/Fondo';
+import { AuthProvider } from './contextos/AuthContext';
+import RutaPrivada from './componentes/RutaPrivada';
+import { TotalGastadoProvider } from './contextos/TotalGastadoEnElMesContext';
+import WebFont from 'webfontloader';
 import favicon from './imagenes/logo.png';
-
 
 WebFont.load({
   google: {
-    families: ['Work+Sans:400'] 
-  }
+    families: ['Work+Sans:400'],
+  },
 });
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    
     <Helmet>
-			<link rel="shortcut icon" href={favicon} type="image/x-icon"/>
+      <link rel="shortcut icon" href={favicon} type="image/x-icon" />
       <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"></link>
-		</Helmet>
-   
+    </Helmet>
+
     <AuthProvider>
       <TotalGastadoProvider>
         <BrowserRouter>
           <Contenedor>
             <Routes>
-              <Route path={"/iniciar-sesion"} element={<InicioSesion />} />
-              <Route path={"/crear-cuenta"} element={<RegistroUsuarios />} />
+              <Route path={'/iniciar-sesion'} element={<InicioSesion />} />
+              <Route path={'/crear-cuenta'} element={<RegistroUsuarios />} />
 
               <Route
-                path={"/categorias"}
+                path={'/categorias'}
                 element={
                   <RutaPrivada>
                     <GastosPorCategoria />
@@ -51,7 +49,7 @@ root.render(
               />
 
               <Route
-                path={"/lista"}
+                path={'/lista'}
                 element={
                   <RutaPrivada>
                     <ListaDeGastos />
@@ -60,7 +58,7 @@ root.render(
               />
 
               <Route
-                path={"/editar/:id"}
+                path={'/editar/:id'}
                 element={
                   <RutaPrivada>
                     <EditarGasto />
@@ -69,7 +67,7 @@ root.render(
               />
 
               <Route
-                path={"/"}
+                path={'/'}
                 element={
                   <RutaPrivada>
                     <App />
@@ -82,5 +80,5 @@ root.render(
       </TotalGastadoProvider>
     </AuthProvider>
     <Fondo />
-  </>
+  </>,
 );

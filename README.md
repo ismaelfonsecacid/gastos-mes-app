@@ -8,31 +8,37 @@
 6. [Conclusión](#conclusión)
 7. [Getting Started with Create React App](#getting-started-with-create-react-app)
 
-
 ## Resumen
+
 La aplicación de Gestión de Gastos Mensuales es una solución integral desarrollada con React para la interfaz de usuario y Firebase para la gestión y almacenamiento de datos en la nube. Diseñada para simplificar el seguimiento de los gastos mensuales, la aplicación proporciona una experiencia de usuario intuitiva y segura.
 
 ## Características Clave
 
 1. **Interfaz de Usuario Intuitiva:**
+
    - Desarrollada con React para una experiencia de usuario fluida.
 
 2. **Registro de Gastos:**
+
    - Formulario estructurado para registrar gastos diarios con categorías y etiquetas.
 
 3. **Visualización de Gastos:**
+
    - Panel de control con gráficos interactivos y tablas resumen.
 
 4. **Autenticación y Seguridad:**
+
    - Firebase garantiza la autenticación segura y el almacenamiento seguro de datos.
 
 5. **Notificaciones Personalizadas:**
+
    - Configuración de recordatorios y notificaciones personalizadas.
 
 6. **Sincronización en Tiempo Real:**
    - Firebase permite la sincronización en tiempo real entre dispositivos.
 
 ## Tecnologías Utilizadas
+
 - React: Desarrollo de la interfaz de usuario.
 - Firebase: Autenticación, almacenamiento de datos y sincronización en tiempo real.
 - HTML y CSS: Diseño y presentación.
@@ -67,14 +73,13 @@ La aplicación de Gestión de Gastos Mensuales es una solución integral desarro
 
 - **webfontloader** (v1.6.28): Librería para cargar fuentes web de manera asíncrona. Facilita la carga eficiente de fuentes personalizadas en la aplicación.
 
-
 ## Beneficios
+
 La aplicación simplifica el seguimiento de gastos y proporciona herramientas para tomar decisiones financieras informadas. La combinación de React y Firebase garantiza un rendimiento eficiente y una experiencia de usuario óptima.
 
 ## Conclusión
+
 La aplicación desarrollada con React y Firebase ofrece una solución robusta y escalable para el seguimiento de gastos mensuales, brindando a los usuarios un control total sobre sus finanzas de manera accesible y eficiente.
-
-
 
 # Getting Started with Create React App
 

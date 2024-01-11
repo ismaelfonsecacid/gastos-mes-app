@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import theme from '../theme'
+import React from 'react';
+import styled from 'styled-components';
+import theme from '../theme';
 import formatearCantidad from '../funciones/convertirAMoneda';
 import { useTotalDelMes } from '../contextos/TotalGastadoEnElMesContext';
 
@@ -13,7 +13,7 @@ export default function BarraTotalGastado() {
   const compartido = 2400;
 
   const BarraTotal = styled.div`
-    background: ${total >= compartido ? "red" : theme.verde};
+    background: ${total >= compartido ? 'red' : theme.verde};
     font-size: 1.25rem; /* 20px */
     letter-spacing: 1px;
     font-weight: 500;
@@ -24,7 +24,8 @@ export default function BarraTotalGastado() {
     justify-content: space-between;
     align-items: center;
 
-    @media(max-width: 31.25rem) { /* 500px */
+    @media (max-width: 31.25rem) {
+      /* 500px */
       flex-direction: column;
       font-size: 14px;
     }
@@ -33,7 +34,9 @@ export default function BarraTotalGastado() {
   return (
     <BarraTotal>
       <p>Total Gastado en el mes:</p>
-      <p>{formatearCantidad(total)}/{compartido}€</p>
+      <p>
+        {formatearCantidad(total)}/{compartido}€
+      </p>
     </BarraTotal>
   );
 }

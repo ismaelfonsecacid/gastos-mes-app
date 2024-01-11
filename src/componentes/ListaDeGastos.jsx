@@ -1,9 +1,9 @@
-import React from "react";
-import { Header, Titulo } from "../elementos/Header";
-import { Helmet } from "react-helmet";
-import BtnRegresar from "../elementos/BtnRegresar";
-import BarraTotalGastado from "./BarraTotalGastado";
-import useObtenerGastos from "../hooks/useObtenerGastos";
+import React from 'react';
+import { Header, Titulo } from '../elementos/Header';
+import { Helmet } from 'react-helmet';
+import BtnRegresar from '../elementos/BtnRegresar';
+import BarraTotalGastado from './BarraTotalGastado';
+import useObtenerGastos from '../hooks/useObtenerGastos';
 import {
   Lista,
   ElementoLista,
@@ -17,17 +17,16 @@ import {
   ContenedorBotonCentral,
   ContenedorSubtitulo,
   Subtitulo,
-} from "../elementos/ElementosDeLista";
-import IconoCategoria from "../elementos/IconoCategoria";
-import convertirAMoneda from "../funciones/convertirAMoneda";
-import { ReactComponent as IconoEditar } from "../imagenes/editar.svg";
-import { ReactComponent as IconoBorrar } from "../imagenes/borrar.svg";
-import { Link } from "react-router-dom";
-import Boton from "../elementos/Boton";
-import { format, fromUnixTime } from "date-fns";
-import { es } from "date-fns/locale";
-import borrarGasto from "../firebase/borrarGasto";
-
+} from '../elementos/ElementosDeLista';
+import IconoCategoria from '../elementos/IconoCategoria';
+import convertirAMoneda from '../funciones/convertirAMoneda';
+import { ReactComponent as IconoEditar } from '../imagenes/editar.svg';
+import { ReactComponent as IconoBorrar } from '../imagenes/borrar.svg';
+import { Link } from 'react-router-dom';
+import Boton from '../elementos/Boton';
+import { format, fromUnixTime } from 'date-fns';
+import { es } from 'date-fns/locale';
+import borrarGasto from '../firebase/borrarGasto';
 
 export default function ListaDeGastos() {
   const [gastos, obtenerMasGastos, hayMasPorCargar] = useObtenerGastos();
@@ -97,7 +96,9 @@ export default function ListaDeGastos() {
       {gastos.length === 0 && (
         <ContenedorSubtitulo>
           <Subtitulo>No hay mas gastos para mostrar</Subtitulo>
-          <Boton as={Link} to={'/'}>Agregar Gasto</Boton>
+          <Boton as={Link} to={'/'}>
+            Agregar Gasto
+          </Boton>
         </ContenedorSubtitulo>
       )}
       <BarraTotalGastado />

@@ -1,12 +1,8 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
-
-
 
 :root {
   font-size: 13px !important;
@@ -14,7 +10,7 @@
 }
 
 body {
-  background: #F9F9F9;
+  background: #f9f9f9;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -26,8 +22,9 @@ body {
   width: 100%;
 }
 
-@media screen and (max-width: 60rem){ /* 950px */
+@media screen and (max-width: 60rem) {
+  /* 950px */
   :root {
-      font-size: 14px;
+    font-size: 14px;
   }
 }

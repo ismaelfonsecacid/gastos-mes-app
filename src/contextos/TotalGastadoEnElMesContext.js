@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
-import useObtenerGastosDelMes from "../hooks/useObtenerGastosDelMes";
+import React, { useContext, useEffect, useState } from 'react';
+import useObtenerGastosDelMes from '../hooks/useObtenerGastosDelMes';
 
 const TotalGastadoContext = React.createContext();
 
@@ -14,7 +14,7 @@ const TotalGastadoProvider = ({ children }) => {
     gastos.forEach((gasto) => {
       acumulado += gasto.cantidad;
     });
-   setTotal(acumulado)
+    setTotal(acumulado);
   }, [gastos]);
 
   return (

@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 import {
   Header,
   Titulo,
   ContenedorBotones,
   ContenedorHeader,
-} from "./elementos/Header";
-import Boton from "./elementos/Boton";
-import { Helmet } from "react-helmet";
-import BotonCerrarSesion from "./componentes/BotonCerrarSesion";
-import FormularioGasto from "./componentes/FormularioGasto";
-import BarraTotalGastado from "./componentes/BarraTotalGastado";
+} from './elementos/Header';
+import Boton from './elementos/Boton';
+import { Helmet } from 'react-helmet';
+import BotonCerrarSesion from './componentes/BotonCerrarSesion';
+import FormularioGasto from './componentes/FormularioGasto';
+import BarraTotalGastado from './componentes/BarraTotalGastado';
 
 export default function App() {
   return (

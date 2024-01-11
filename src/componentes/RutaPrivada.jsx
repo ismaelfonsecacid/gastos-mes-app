@@ -1,15 +1,13 @@
-import React from 'react'
-import { useAuth } from '../contextos/AuthContext'
+import React from 'react';
+import { useAuth } from '../contextos/AuthContext';
 import { Navigate } from 'react-router-dom';
 
-export default function RutaPrivada({children}) {
-  
-    const {usuario} = useAuth();
+export default function RutaPrivada({ children }) {
+  const { usuario } = useAuth();
 
-    if(usuario) {
-        return children;
-    }else {
-        return <Navigate replace to="/iniciar-sesion"/>
-    }
-  
+  if (usuario) {
+    return children;
+  } else {
+    return <Navigate replace to="/iniciar-sesion" />;
+  }
 }

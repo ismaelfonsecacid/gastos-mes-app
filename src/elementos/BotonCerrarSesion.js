@@ -1,27 +1,27 @@
 import React from 'react';
-import {ReactComponent as IconoCerrarSesion} from './../imagenes/log-out.svg';
+import { ReactComponent as IconoCerrarSesion } from './../imagenes/log-out.svg';
 import Boton from './Boton';
-import {auth} from './../firebase/firebaseConfig';
-import {signOut} from 'firebase/auth';
+import { auth } from './../firebase/firebaseConfig';
+import { signOut } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 
 const BotonCerrarSesion = () => {
-	const navigate = useNavigate();
+  const navigate = useNavigate();
 
-	const cerrarSesion = async() => {
-		try {
-			await signOut(auth);
-			navigate('/iniciar-sesion');
-		} catch(error){
-			console.log(error);
-		}
-	}
+  const cerrarSesion = async () => {
+    try {
+      await signOut(auth);
+      navigate('/iniciar-sesion');
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-	return (
-		<Boton iconogrande="true" as="button" onClick={cerrarSesion}>
-			<IconoCerrarSesion />
-		</Boton>
-	);
-}
- 
+  return (
+    <Boton iconogrande="true" as="button" onClick={cerrarSesion}>
+      <IconoCerrarSesion />
+    </Boton>
+  );
+};
+
 export default BotonCerrarSesion;
