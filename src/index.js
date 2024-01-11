@@ -10,12 +10,12 @@ import GastosPorCategoria from "./componentes/GastosPorCategoria";
 import InicioSesion from "./componentes/InicioSesion";
 import ListaDeGastos from "./componentes/ListaDeGastos";
 import RegistroUsuarios from "./componentes/RegistroUsuarios";
-import favicon from "./imagenes/logo.png";
 import Fondo from "./elementos/Fondo";
 import { AuthProvider } from "./contextos/AuthContext";
 import RutaPrivada from "./componentes/RutaPrivada";
 import { TotalGastadoProvider } from "./contextos/TotalGastadoEnElMesContext";
 import WebFont from 'webfontloader'
+import favicon from './imagenes/logo.png';
 
 
 WebFont.load({
@@ -27,9 +27,12 @@ WebFont.load({
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
+    
     <Helmet>
-      <link rel="shortcut icon" href={favicon} type="image/x-icon" />
-    </Helmet>
+			<link rel="shortcut icon" href={favicon} type="image/x-icon"/>
+      <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"></link>
+		</Helmet>
+   
     <AuthProvider>
       <TotalGastadoProvider>
         <BrowserRouter>
