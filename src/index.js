@@ -15,6 +15,14 @@ import Fondo from "./elementos/Fondo";
 import { AuthProvider } from "./contextos/AuthContext";
 import RutaPrivada from "./componentes/RutaPrivada";
 import { TotalGastadoProvider } from "./contextos/TotalGastadoEnElMesContext";
+import WebFont from 'webfontloader'
+
+
+WebFont.load({
+  google: {
+    families: ['Work+Sans:400'] 
+  }
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
